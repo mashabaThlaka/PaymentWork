@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<login>
+	<parameter>
+	            <dwallet>
+				<identifier>xpath</identifier>
+				<Element>/html/body/app-root/project-selection/div/a[1]/div/div</Element>
+				</dwallet>
+				
+				<merchant>
+				<identifier>xpath</identifier>
+				<Element>/html/body/app-root/digital-wallet/div/form/div[1]/div[2]/select/option[4]</Element>
+				</merchant>
+				
+				<smerchant>
+				<identifier>xpath</identifier>
+				<Element>/html/body/app-root/digital-wallet/div/form/div[1]/div[2]/select/option[4]</Element>
+				</smerchant>
+				
+				<continue>
+				<identifier>xpath</identifier>
+				<Element>/html/body/app-root/digital-wallet/div/form/button</Element>
+				</continue>
+				
+				<email>
+				<identifier>xpath</identifier>
+				<Element>/html/body/app-root/digital-wallet/div/div/form[1]/div[4]/div/input</Element>
+				</email>
+				
+				<nextbtn>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="eshop"]/div/div/input</Element>
+				</nextbtn>
+				
+				<vodabtn>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="paymentText"]/div[1]/div[1]/div/a</Element>
+				</vodabtn>
+				
+				<username>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="Username"]</Element>
+				</username>
+				
+				<password>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="Password"]</Element>
+				</password>
+				
+				<loginbtn>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="eshop"]/div/div[6]/div[1]/div[3]/input</Element>
+				</loginbtn>
+				
+				<CVV>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="CV2"]</Element>
+				</CVV>
+				
+				<paybtn>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="eshop"]/main/section/div[2]/div[4]/div/div[3]/input</Element>
+				</paybtn>
+				
+				<usert>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="Username"]</Element>
+				</usert>
+				
+				<passt>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="Password"]</Element>
+				</passt>
+				
+				<logint>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="eshop"]/div/div[6]/div[1]/div[3]/input</Element>
+				</logint>
+				
+				<secure>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="code"]</Element>
+				</secure>
+				
+				<submit>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="form"]/div/span/input</Element>
+				</submit>
+				
+				<sucess>
+				<identifier>cssselector</identifier>
+				<Element>body > div > table > tbody > tr > td > table > tbody > tr:nth-child(10) > td:nth-child(2)</Element>
+				</sucess>
+				
+				<sucessw>
+				<identifier>xpath</identifier>
+				<Element>/html/body/div/table/tbody/tr/td/h2</Element>
+				</sucessw>
+				
+				<visabtn>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="paymentText"]/div[1]/div[2]/div/div/div</Element>
+				</visabtn>
+							
+				<checkbtn>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="ShowVodaPayRegisterCheckbox"]</Element>
+				</checkbtn>
+			
+				<cardname>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="cc_name"]</Element>
+				</cardname>
+				
+				<cardnumber>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="cc_no"]</Element>
+				</cardnumber>
+								
+				<months>
+				<identifier>ID</identifier>
+				<Element>cc_expmon</Element>
+				</months>
+				
+				<year>
+				<identifier>ID</identifier>
+				<Element>cc_expyr</Element>
+				</year>
+				
+				<CVV2>
+				<identifier>ID</identifier>
+				<Element>cc_cv2</Element>
+				</CVV2>
+				
+				<submit2>
+				<identifier>CSSSELECTOR</identifier>
+				<Element>#eshop > main > div:nth-child(5) > section > div > div:nth-child(10) > div > div:nth-child(3) > input.btn.btn-primary.btn-block.payNoRegister.ccsubmit</Element>
+				</submit2>
+				
+							
+				<reguser>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="Username"]</Element>
+				</reguser>
+				
+				<regpassword>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="Password"]</Element>
+				</regpassword>
+				
+				<regconfirm>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="ConfirmPassword"]</Element>
+				</regconfirm>				
+				
+				<regemail>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="Email"]</Element>
+				</regemail>	
+				
+				<regmobile>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="Mobile"]</Element>
+				</regmobile>	
+				
+				<regbtn>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="eshop"]/div[3]/div[8]/div[1]/div[3]/input</Element>
+				</regbtn>
+				
+				<regmes>
+				<identifier>CSSSELECTOR</identifier>
+				<Element>#eshop > div:nth-child(2) > div > strong</Element>
+				</regmes>
+				
+				<tt>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="eshop"]/div[2]/div</Element>
+				</tt>
+								
+				<regpay>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="eshop"]/main/div[4]/section/div/div[8]/div/div[3]/input[2]</Element>
+				</regpay>
+				
+				<jj>
+				<identifier>xpath</identifier>
+				<Element>/html/body/div/table/tbody/tr/td/h2</Element>
+				</jj>
+				
+				<regresults>
+				<identifier>CSSSELECTOR</identifier>
+				<Element>body > div > table > tbody > tr > td > table > tbody > tr:nth-child(11) > td:nth-child(2)</Element>
+				</regresults>
+				
+				<loginlink>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="eshop"]/div[3]/div[8]/div[2]/div/a</Element>
+				</loginlink>
+				
+				<reglink>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="eshop"]/div/div[6]/div[2]/div/a</Element>
+				</reglink>
+				//*[@id="CardHolder"]
+				<treg>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="CardHolder"]</Element>
+				</treg>
+				
+				<areg>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="CardNumber"]</Element>
+				</areg>
+				
+				<areg>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="CardExpiryMonth"]</Element>
+				</areg>
+				<mreg>
+				<identifier>NAME</identifier>
+				<Element>CardExpiryMonth</Element>
+				</mreg>
+				
+				<yreg>
+				<identifier>CSSSELECTOR</identifier>
+				<Element>#CardExpiryYear</Element>
+				</yreg>
+				
+				<aliasreg>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="Name"]</Element>
+				</aliasreg>
+				
+				<addcard>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="addCardSubmitBtn"]</Element>
+				</addcard>
+				
+				<CardHolder>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="CardHolder"]</Element>
+				</CardHolder>
+				
+				<CardNumber>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="CardNumber"]</Element>
+				</CardNumber>
+			   
+			    <callias>
+				<identifier>xpath</identifier>
+				<Element> //*[@id="Name"]</Element>
+				</callias>
+				
+				<CardExpiryMonth>
+				<identifier>ID</identifier>
+				<Element>CardExpiryMonth</Element>
+				</CardExpiryMonth>
+				
+				<CardExpiryYear>
+				<identifier>ID</identifier>
+				<Element>CardExpiryYear</Element>
+				</CardExpiryYear>
+				
+				<btnsave>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="eshop"]/div[3]/div[1]/div[9]/div/div[3]/input</Element>
+				</btnsave>
+				
+				<m2>
+				<identifier>CSSSELECTOR</identifier>
+				<Element>#eshop > main > section > div:nth-child(1) > div > strong</Element>
+				</m2>
+				
+				<m22>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="eshop"]/main/section/div[2]/div/div/p</Element>
+				</m22>
+				
+				<cardexist>
+				<identifier>CSSSELECTOR</identifier>
+				<Element>#eshop > div.error-message > div > div > p</Element>
+				</cardexist>
+				
+				<Card_edit>
+				<identifier>ID</identifier>
+				<Element>Card</Element>
+				</Card_edit>
+				
+				<Card_edit1>
+				<identifier>CSSSELECTOR</identifier>
+				<Element>#Card</Element>
+				</Card_edit1>
+				
+				<Card_edit1>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="editCardSubmit"]</Element>
+				</Card_edit1>
+				
+				<delete>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="eshop"]/main/section/div[2]/div[1]/div[2]/div[1]/div/div/div[2]/div/div[3]/table/tbody/tr/td[2]</Element>
+				</delete>
+				
+				<yes>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="deleteCardSubmit"]</Element>
+				</yes>
+				
+				<results>
+				<identifier>xpath</identifier>
+				<Element>/html/body/div/table/tbody/tr/td</Element>
+				</results>
+				
+	</parameter>
+</login>

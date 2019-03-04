@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<transactions>
+	<parameter>
+				<main>
+				<identifier>xpath</identifier>
+				<Element>/html/body/div[1]/table/tbody/tr/td/table/tbody/tr/td/a[1]</Element>
+				</main>
+				
+				<trans_tab>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="tabs"]/ul/li[4]/a</Element>
+				</trans_tab>
+				<username>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="Username"]</Element>
+				</username>
+				
+				<password>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="Password"]</Element>
+				</password>
+				
+				<loginbtn>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="login-logoff-content"]/form/table/tbody/tr/td/input</Element>
+				</loginbtn>
+				
+				<FirstQuestion>				
+				<identifier>cssselector</identifier>
+				<Element>.pageTable > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > label:nth-child(1)</Element>
+				</FirstQuestion>
+
+				<SecondQuestion>
+				<identifier>cssselector</identifier>
+				<Element>#login-logoff-content > form > table > tbody > tr:nth-child(2) > td:nth-child(1) > label</Element>
+				</SecondQuestion>
+				
+				<LoginButton>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="login-logoff-content"]/form/table/tbody/tr[3]/td/input</Element>
+				</LoginButton>
+				
+				
+				<find>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="tabs-4"]/table/tbody/tr/td[2]/a</Element>
+				</find>
+				
+				<tranid>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="TransID"]</Element>
+				</tranid>
+				
+				<findbutton>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="findButton"]</Element>
+				</findbutton>
+				
+				<tab>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="tabs"]</Element>
+				</tab>
+				
+				<findtable>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="content"]/form/table[2]/tbody/tr/td/table[2]</Element>
+				</findtable>
+				
+				<view>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="tabs-4"]/table/tbody/tr/td[1]/a[1]</Element>
+				</view>
+				
+				<viewbtn>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="viewButton"]</Element>
+				</viewbtn>
+				
+							
+				<viewR>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="content"]/form/table[2]/tbody/tr/td/table[1]/tbody/tr[1]/td/table</Element>
+				</viewR>
+				
+				
+				<refund>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="tabs-4"]/table/tbody/tr/td[3]/a</Element>
+				</refund>
+				<refund1>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="tabs-4"]/table/tbody/tr/td[2]/a[2]</Element>
+				</refund1>
+				
+				<TransactionID>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="TransactionID"]</Element>
+				</TransactionID>
+				
+				<refundbtn>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="submit"]</Element>
+				</refundbtn>
+				
+				<refundR>
+				<identifier>xpath</identifier>
+				<Element>/html/body/div[1]/div/form/div</Element>
+				</refundR>
+				
+				<message1>
+				<identifier>cssselector</identifier>
+				<Element>.pageInfoMessage</Element>
+				</message1>
+				
+				<message2>
+				<identifier>cssselector</identifier>
+				<Element>.pageErrorMessage</Element>
+				</message2>
+				
+				<test1>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="content"]/table/tbody/tr/td</Element>
+				</test1>
+				<test2>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="content"]</Element>
+				</test2>
+				
+				<log_out>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="select-menu-logoff"]/a</Element>
+				</log_out>
+				
+				<findt>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="tabs-4"]/table/tbody/tr/td[2]/a</Element>
+				</findt>
+				
+				<tranid>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="TransID"]</Element>
+				</tranid>
+				
+				<findbtn>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="findButton"]</Element>
+				</findbtn>
+				
+				<refundl>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="tabs-4"]/table/tbody/tr/td[3]/a</Element>
+				</refundl>
+				
+				<preauth02>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="preauth02"]</Element>
+				</preauth02>
+				
+				
+								
+	</parameter>
+</transactions>

@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<eshop>
+	<parameter>
+	
+	<eshop_btn>
+		<identifier>CSSSELECTOR</identifier>
+		<Element>.frame > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > form:nth-child(10) > input:nth-child(38)</Element>
+	</eshop_btn>
+	<eshop_btn1>
+		<identifier>CSSSELECTOR</identifier>
+		<Element>.frame > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > form:nth-child(7) > input:nth-child(38)</Element>
+	</eshop_btn1>
+	<eshop_btn2>
+		<identifier>CSSSELECTOR</identifier>
+		<Element>.frame > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > form:nth-child(13) > input:nth-child(38)</Element>
+	</eshop_btn2>
+	
+	<paymenttype>
+	<identifier>NAME</identifier>
+	<Element>cc_type</Element>
+	</paymenttype>	
+	
+	<pay_type>
+	<identifier>CSSSELECTOR</identifier>
+	<Element>#eshop > main > div > div > section > table > tbody > tr:nth-child(1) > td:nth-child(2) > div > select</Element>
+	</pay_type>
+	
+	<cardname>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="cc_name"]</Element>
+	</cardname>
+	
+	<cardno>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="cc_no"]</Element>
+	</cardno>
+	
+	<months>
+	<identifier>ID</identifier>
+	<Element>cc_expmon</Element>
+	</months>
+	
+	
+	<year>
+	<identifier>NAME</identifier>
+	<Element>cc_expyr</Element>
+	</year>
+	
+	<CCVNO>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="cc_cv2"]</Element>
+	</CCVNO>
+	<amount>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="ccsubmit"]</Element>
+	</amount>
+	
+	<btn_continue>
+	<identifier>NAME</identifier>
+	<Element>ccsubmit</Element>
+	</btn_continue>
+	
+	<btn_continue2>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="submit"]</Element>
+	</btn_continue2>
+	
+	<results>
+	<identifier>CSSSELECTOR</identifier>
+	<Element>body > div > table > tbody > tr > td > table > tbody > tr:nth-child(8) > td:nth-child(2)</Element>
+	</results>
+	<CorrelationIdentifier>
+	<identifier>CSSSELECTOR</identifier>
+	<Element></Element>
+	</CorrelationIdentifier>
+	<ErrorCode>
+	<identifier>CSSSELECTOR</identifier>
+	<Element>.reportTable > tbody:nth-child(1) > tr:nth-child(9) > td:nth-child(2)</Element>
+	</ErrorCode>
+	<ErrorDescription>
+	<identifier>CSSSELECTOR</identifier>
+	<Element>.reportTable > tbody:nth-child(1) > tr:nth-child(10) > td:nth-child(2)</Element>
+	</ErrorDescription>
+	
+	<valid>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="entry-page-header"]/tbody/tr/td[2]</Element>
+	</valid>
+	
+	<first>
+	<identifier>xpath</identifier>
+	<Element>/html/body/div[1]/table/tbody/tr/td/table</Element>
+	</first>
+	
+	<submit_txt>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="code"]</Element>
+	</submit_txt>
+	
+	<submit_btns>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="form"]/div/span/input</Element>
+	</submit_btns>
+	
+	<preauth02>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="preauth02"]</Element>
+	</preauth02>
+				
+	<auth02>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="fullauth03"]</Element>
+	</auth02>
+	
+	<conF>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="tabs-4"]/table/tbody/tr/td[3]/a</Element>
+	</conF>
+	
+	<search>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="SearchTransactionID"]</Element>
+	</search>
+	
+	<findb>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="findButton"]</Element>
+	</findb>
+	
+	<findC>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="confirm"]</Element>
+	</findC>
+	
+	<finds>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="submit"]</Element>
+	</finds>
+	
+	<warn>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="Warn"]</Element>
+	</warn>
+	
+	<content>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="content"]/form/div</Element>
+	</content>
+	
+	<reject>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="reject"]</Element>
+	</reject>
+	
+	<supplier_tab>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="ui-id-2"]</Element>
+	</supplier_tab>
+	
+	<supplier_link>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="tabs-2"]/table/tbody/tr/td[1]/a[1]</Element>
+	</supplier_link>
+	
+	<SupplierName>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="SupplierName"]</Element>
+	</SupplierName>
+	
+	<MerchantType>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="MerchantType"]</Element>
+	</MerchantType>
+	
+	<BusinessAddress1>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="BusinessAddress1"]</Element>
+	</BusinessAddress1>
+	
+	<BusinessAddressCity>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="BusinessAddressCity"]</Element>
+	</BusinessAddressCity>
+	
+	<BusinessAddressState>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="BusinessAddressState"]</Element>
+	</BusinessAddressState>
+	
+	<BusinessAddressCountry>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="BusinessAddressCountry"]</Element>
+	</BusinessAddressCountry>
+	<BusinessAddressCountry1>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="BusinessAddressCountry"]/option[193]</Element>
+	</BusinessAddressCountry1>
+	<BusinessAddressCountry2>
+	<identifier>xpath</identifier>
+	<Element>#BusinessAddressCountry > option:nth-child(193)</Element>
+	</BusinessAddressCountry2>
+	
+	
+	<BusinessAddressPostCode>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="BusinessAddressPostCode"]</Element>
+	</BusinessAddressPostCode>
+	
+	<PrimaryContactName>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="PrimaryContactName"]</Element>
+	</PrimaryContactName>
+	
+	<PrimaryContactTelephoneNumberAccessCode>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="PrimaryContactTelephoneNumberAccessCode"]</Element>
+	</PrimaryContactTelephoneNumberAccessCode>
+	
+	<PrimaryContactTelephoneNumber>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="PrimaryContactTelephoneNumber"]</Element>
+	</PrimaryContactTelephoneNumber>
+	
+	<PrimaryContactEmailAddress>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="PrimaryContactEmailAddress"]</Element>
+	</PrimaryContactEmailAddress>
+	
+	<btnSubmit>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="btnSubmit"]</Element>
+	</btnSubmit>
+	
+	<content>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="content"]/table/tbody/tr/td</Element>
+	</content>
+	
+	<global>
+	<identifier>xpath</identifier>
+	<Element>/html/body/div[1]/table/tbody/tr/td/table/tbody/tr/td/a[1]</Element>
+	</global>
+	
+	<wizard>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="tabs-2"]/table/tbody/tr/td[3]/a[9]</Element>
+	</wizard>
+	
+	<save>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="submit"]</Element>
+	</save>
+	
+	<zar>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="CCAccounts"]/option[62]</Element>
+	</zar>
+	
+	<addButton>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="addButton"]</Element>
+	</addButton>
+	
+	<wizardButton>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="wizardButton"]</Element>
+	</wizardButton>
+	
+	<updateButton>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="updateButton"]</Element>
+	</updateButton>
+	
+	<TechUser>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="TechUser"]</Element>
+	</TechUser>
+	
+	<AdminUser>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="AdminUser"]</Element>
+	</AdminUser>
+	
+	<Alias>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="Alias"]</Element>
+	</Alias>
+	
+	<continue2>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="submit"]</Element>
+	</continue2>
+	
+	<landing>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="content"]/table/tbody/tr/td/span[1]</Element>
+	</landing>
+	
+
+	
+	
+	
+	
+		
+	
+	
+	
+	
+	
+	</parameter>
+	
+	
+	
+	
+	
+</eshop>

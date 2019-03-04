@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<login>
+	<parameter>
+	            <main>
+				<identifier>xpath</identifier>
+				<Element>/html/body/div[1]/table/tbody/tr/td/table/tbody/tr/td/a[1]</Element>
+				</main>
+				
+				<username>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="Username"]</Element>
+				</username>			
+					
+				<password>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="Password"]</Element>
+				</password>
+				
+				<loginbtn>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="login-logoff-content"]/form/table/tbody/tr/td/input</Element>
+				</loginbtn>
+				
+				<loginbtn1>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="login-logoff-content"]/form/table/tbody/tr[3]/td/input</Element>
+				</loginbtn1>
+				
+				<FirstQuestion>				
+				<identifier>cssselector</identifier>
+				<Element>.pageTable > tbody:nth-child(1) > tr:nth-child(1) > td:nth-child(1) > label:nth-child(1)</Element>
+				</FirstQuestion>
+
+				<SecondQuestion>
+				<identifier>cssselector</identifier>
+				<Element>#login-logoff-content > form > table > tbody > tr:nth-child(2) > td:nth-child(1) > label</Element>
+				</SecondQuestion>
+				
+				<LoginButton>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="login-logoff-content"]/form/table/tbody/tr[3]/td/input</Element>
+				</LoginButton>
+				
+				
+	</parameter>
+</login>
