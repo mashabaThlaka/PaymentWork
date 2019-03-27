@@ -7,6 +7,10 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.nio.file.Files;
+import java.nio.file.LinkOption;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -39,8 +43,39 @@ import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 public class UtilityFunctions {
-	private String processName;
-
+	private String processName;	
+	private File outputFile;
+	static String pathToSubfolder;
+	 public void ScreenshotParentFolder(String packageName, String sDefaultPath)
+	    {	
+	       // String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
+	        Path pathParentDirectory = Paths.get(sDefaultPath+"\\screenshots"+"/"+"_"+packageName);
+	        
+	        outputFile = new File(sDefaultPath+"\\screenshots"+"/"+"_"+packageName);
+	        if (Files.notExists(pathParentDirectory,LinkOption.NOFOLLOW_LINKS)) 
+	        {
+	        	outputFile.mkdir();
+		        //System.out.println(outputFile);
+	        }
+	        
+	    }
+	 public static String getPathToSubfolder()	{
+			
+			return pathToSubfolder;
+		}
+	    
+	//This is for second time folder creation
+	    public String subfolderCreation(String className, String timestamp){
+	    	
+	        String st = outputFile.getAbsolutePath();
+	        //System.out.println("The first path is"+st);
+	        outputFile = new File(st+"/"+className+timestamp);
+	        outputFile.mkdirs();
+	        System.out.println(outputFile);
+	        pathToSubfolder = outputFile.getPath();
+	        //String pathToSubfolder = outputFile.getPath();
+	        return pathToSubfolder;
+	    }
 	public WebDriver initializeWedriver(String sdriverName, String sDefaultPath)
 	{
 		WebDriver driver = null;
@@ -244,7 +279,7 @@ public class UtilityFunctions {
 		
 		  if (Screenshot)
 		  {
-			  String fileName=takeScreenShot(driver,"ExtentLogFail", sDefaultPath);
+			  String fileName=takeScreenShot(driver,"ExtentLogPass", sDefaultPath);
 			  logger.pass(sMessagePass, MediaEntityBuilder.createScreenCaptureFromPath(fileName).build());
 			 // logger.addScreenCaptureFromPath(fileName);
 		  }
@@ -812,7 +847,65 @@ public class UtilityFunctions {
 		}
 		
 		
+		
+		/*****************************************************************************
+		Function Name: 	checkIfObjectIsClicked
+		Description:	Checks if an object exists using either an xpath, ID or a Name
+		Date Created:	27/03/2019
+		Author: Mash 
+		******************************************************************************/
+		
+		public boolean checkIfObjectIsClicked(WebDriver driver, String property, String path)
+		{
+			boolean exists = false;
+			try
+			{
+				//get object properties from the xml file repository
+				String[] element = xmlParser(path, property);
+				switch (element[0].toUpperCase())
+				  {
+					  case "XPATH":
+						  if((driver.findElement(By.xpath(element[1]))).isSelected() == true){
+								exists=true;
+								}else{
+								exists=false;
+								}
+						  break;
+					  
+					  case "ID":
+						  if((driver.findElement(By.xpath(element[1]))).isSelected() == true){
+								exists=true;
+								}else{
+								exists=false;
+								}
+						  break;
+					      
+					  case "NAME":
+						  if((driver.findElement(By.xpath(element[1]))).isSelected() == true){
+								exists=true;
+								}else{
+								exists=false;
+								}
+						  break;
+					  case "LINKTEXT":
+						  if((driver.findElement(By.xpath(element[1]))).isSelected() == true) {
+								exists=true;
+								}else{
+								exists=false;
+								}
+						  break;
+				  }
+			 
+			}
+			catch(Exception e)
+				{
+					System.out.println(e.getMessage());
+					exists=false;
+				}
+			return exists;
 
+							
+		}
 
 		/*****************************************************************************
 		Function Name: 	checkIfObjectIsDisplayed

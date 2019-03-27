@@ -414,7 +414,7 @@ public void T_0005_view_transactions(WebDriver driver, ExtentTest logger, String
 		driver.manage().window().maximize();
 		Thread.sleep(2000);		
 		utils.navigate(driver,url.toString());
-		ext.transamrt_login(driver, logger, rDefaultPath,username,password);
+		//////ext.transamrt_login(driver, logger, rDefaultPath,username,password);
 		Thread.sleep(2000);
 		utils.ClickObject(driver, "trans_tab", rDefaultPath+transactions);
 		Thread.sleep(2000);
@@ -448,7 +448,7 @@ public void T_0006_refund_transactions(WebDriver driver, ExtentTest logger, Stri
 		driver.manage().window().maximize();
 		Thread.sleep(2000);		
 		utils.navigate(driver,url.toString());
-		ext.transamrt_login(driver, logger, rDefaultPath,username,password);
+		//////ext.transamrt_login(driver, logger, rDefaultPath,username,password);
 		//Thread.sleep(2000);	
 		//utils.ClickObject(driver, "t", rDefaultPath+transactions);
 		utils.ClickObject(driver, "trans_tab", rDefaultPath+transactions);
@@ -496,7 +496,7 @@ public void find_transactions(WebDriver driver, ExtentTest logger, String sDefau
 		driver.manage().window().maximize();
 		Thread.sleep(2000);		
 		utils.navigate(driver,url.toString());
-		ext.transamrt_login(driver, logger, rDefaultPath,username,password);
+		//////ext.transamrt_login(driver, logger, rDefaultPath,username,password);
 		Thread.sleep(2000);	
 		utils.ClickObject(driver, "trans_tab", rDefaultPath+transactions);
 		utils.ExtentLogPassFail(driver, "findt", "\t\t PASSED", ""+"\t\t FAILED", logger,true, rDefaultPath,transactions);
@@ -531,7 +531,7 @@ public void find_transactions_back(WebDriver driver, ExtentTest logger, String s
 		driver.manage().window().maximize();
 		Thread.sleep(2000);		
 		utils.navigate(driver,url.toString());
-		ext.transamrt_login(driver, logger, rDefaultPath,username,password);
+		//////ext.transamrt_login(driver, logger, rDefaultPath,username,password);
 		Thread.sleep(2000);	
 		utils.ClickObject(driver, "trans_tab", rDefaultPath+transactions);
 		utils.ExtentLogPassFail(driver, "findt", "\t\t PASSED", ""+"\t\t FAILED", logger,true, rDefaultPath,transactions);
@@ -567,7 +567,7 @@ public void T_0005_view_transactions_front(WebDriver driver, ExtentTest logger, 
 		driver.manage().window().maximize();
 		Thread.sleep(2000);		
 		utils.navigate(driver,url.toString());
-		ext.transamrt_login(driver, logger, rDefaultPath,username,password);
+		////ext.transamrt_login(driver, logger, rDefaultPath,username,password);
 		Thread.sleep(2000);
 		utils.ClickObject(driver, "trans_tab", rDefaultPath+transactions);
 		//driver.findElement(By.linkText("Transactions")).click();
@@ -607,7 +607,7 @@ public void confirm_refund(WebDriver driver, ExtentTest logger, String sDefaultP
 		driver.manage().window().maximize();
 		Thread.sleep(2000);		
 		utils.navigate(driver,url.toString());
-		ext.transamrt_login(driver, logger, rDefaultPath,username,password);
+		////ext.transamrt_login(driver, logger, rDefaultPath,username,password);
 		Thread.sleep(2000);	
 		utils.ClickObject(driver, "trans_tab", rDefaultPath+transactions);
 		if(utils.checkIfObjectExists(driver, "conF", rDefaultPath+transactions)){
@@ -696,7 +696,7 @@ public void reject_refund(WebDriver driver, ExtentTest logger, String sDefaultPa
 		driver.manage().window().maximize();
 		Thread.sleep(2000);		
 		utils.navigate(driver,url.toString());
-		ext.transamrt_login(driver, logger, rDefaultPath,username,password);
+		////ext.transamrt_login(driver, logger, rDefaultPath,username,password);
 		Thread.sleep(2000);	
 		utils.ClickObject(driver, "trans_tab", rDefaultPath+transactions);
 
@@ -749,7 +749,7 @@ public void charge_back(WebDriver driver, ExtentTest logger, String sDefaultPath
 			Thread.sleep(2000);
 			url.toString();	
 			utils.navigate(driver,url.toString());
-			ext.transamrt_login(driver, logger, rDefaultPath,username,password);
+			////ext.transamrt_login(driver, logger, rDefaultPath,username,password);
 			Thread.sleep(2000);	
 		 //create data
 			utils.ClickObject(driver, "trans_tab", rDefaultPath+transactions);
@@ -837,7 +837,7 @@ public void Confirm_charge_back(WebDriver driver, ExtentTest logger, String sDef
 				Thread.sleep(2000);
 				url.toString();	
 				utils.navigate(driver,url.toString());
-				ext.transamrt_login(driver, logger, rDefaultPath,username,password);
+				////ext.transamrt_login(driver, logger, rDefaultPath,username,password);
 				Thread.sleep(2000);	
 				System.out.println(transaction_id);
 			  
@@ -902,7 +902,7 @@ public void Confirm_Multiple_Chargebacks(WebDriver driver, ExtentTest logger, St
 			Thread.sleep(2000);
 			url.toString();
 			utils.navigate(driver,url.toString());
-			ext.transamrt_login(driver, logger, rDefaultPath,username,password);
+			////ext.transamrt_login(driver, logger, rDefaultPath,username,password);
 			Thread.sleep(2000);
 			
 			 if(utils.checkIfObjectExists(driver, "transation_tab", rDefaultPath+transactions)) {
@@ -965,7 +965,7 @@ public void Sales_Summary(WebDriver driver, ExtentTest logger, String sDefaultPa
 		Thread.sleep(2000);
 		url.toString();
 		utils.navigate(driver,url.toString());
-		ext.transamrt_login(driver, logger, rDefaultPath,username,password);
+		////ext.transamrt_login(driver, logger, rDefaultPath,username,password);
 		Thread.sleep(2000);
 		
 		 if(utils.checkIfObjectExists(driver, "trans_tab", rDefaultPath+transactions)) {
@@ -1024,7 +1024,7 @@ public void View_Payment_Changes(WebDriver driver, ExtentTest logger, String sDe
 		Thread.sleep(2000);
 		url.toString();
 		utils.navigate(driver,url.toString());
-		ext.transamrt_login(driver, logger, rDefaultPath,username,password);
+		////ext.transamrt_login(driver, logger, rDefaultPath,username,password);
 		Thread.sleep(2000);
 		
 		 if(utils.checkIfObjectExists(driver, "transation_tab", rDefaultPath+transactions)) {
@@ -1082,7 +1082,7 @@ public void Multiple_Chargebacks(WebDriver driver, ExtentTest logger, String sDe
 			Thread.sleep(2000);
 			url.toString();
 			utils.navigate(driver,url.toString());
-			ext.transamrt_login(driver, logger, rDefaultPath,username,password);
+			////ext.transamrt_login(driver, logger, rDefaultPath,username,password);
 			Thread.sleep(2000);
 			//create data
 			utils.ClickObject(driver, "transation_tab", rDefaultPath+transactions);
@@ -1169,7 +1169,7 @@ public void Settle_Transaction(WebDriver driver, ExtentTest logger, String sDefa
 			Thread.sleep(2000);
 			url.toString();
 			utils.navigate(driver,url.toString());
-			ext.transamrt_login(driver, logger, rDefaultPath,username,password);
+			////ext.transamrt_login(driver, logger, rDefaultPath,username,password);
 			Thread.sleep(2000);
 			//create data
 			utils.ClickObject(driver, "trans_tab", rDefaultPath+transactions);
@@ -1260,7 +1260,7 @@ public void Multiple_Refunds(WebDriver driver, ExtentTest logger, String sDefaul
 			Thread.sleep(2000);
 			url.toString();
 			utils.navigate(driver,url.toString());
-			ext.transamrt_login(driver, logger, rDefaultPath,username,password);
+			////ext.transamrt_login(driver, logger, rDefaultPath,username,password);
 			Thread.sleep(2000);
 		/*	//create data
 			utils.ClickObject(driver, "transation_tab", rDefaultPath+transactions);
@@ -1345,7 +1345,7 @@ public void Supplier_Statement (WebDriver driver, ExtentTest logger, String sDef
 			Thread.sleep(2000);
 			url.toString();
 			utils.navigate(driver,url.toString());
-			ext.transamrt_login(driver, logger, rDefaultPath,username,password);
+			////ext.transamrt_login(driver, logger, rDefaultPath,username,password);
 			Thread.sleep(2000);
 			
 			//utils.ClickObject(driver,"go-back", rDefaultPath+transactions);
@@ -1400,7 +1400,7 @@ public void Cancel_Preauthorisation(WebDriver driver, ExtentTest logger, String 
 			Thread.sleep(2000);
 			url.toString();
 			utils.navigate(driver,url.toString());
-			ext.transamrt_login(driver, logger, rDefaultPath,username,password);
+			////ext.transamrt_login(driver, logger, rDefaultPath,username,password);
 			Thread.sleep(2000);
 			
 			//utils.ClickObject(driver,"go-back", rDefaultPath+transactions);
@@ -1451,7 +1451,7 @@ public void Reverse_Multiple_Chargebacks(WebDriver driver, ExtentTest logger, St
 			Thread.sleep(2000);
 			url.toString();
 			utils.navigate(driver,url.toString());
-			ext.transamrt_login(driver, logger, rDefaultPath,username,password);
+			////ext.transamrt_login(driver, logger, rDefaultPath,username,password);
 			Thread.sleep(2000);
 			
 			
@@ -1533,7 +1533,7 @@ public void Reverse_Chargebacks(WebDriver driver, ExtentTest logger, String sDef
 			Thread.sleep(2000);
 			url.toString();
 			utils.navigate(driver,url.toString());
-			ext.transamrt_login(driver, logger, rDefaultPath,username,password);
+			////ext.transamrt_login(driver, logger, rDefaultPath,username,password);
 			Thread.sleep(2000);
 			
 			
@@ -1611,7 +1611,7 @@ public void Transaction_Status_Report(WebDriver driver, ExtentTest logger, Strin
 		Thread.sleep(2000);
 		url.toString();
 		utils.navigate(driver,url.toString());
-		ext.transamrt_login(driver, logger, rDefaultPath,username,password);
+		////ext.transamrt_login(driver, logger, rDefaultPath,username,password);
 		Thread.sleep(2000);
 		
 		 if(utils.checkIfObjectExists(driver, "trans_tab", rDefaultPath+transactions)) {
@@ -1674,7 +1674,7 @@ public void Merchant_on_boarding(WebDriver driver, ExtentTest logger, String sDe
 		}else{
 			utils.ExtentLogPassFail(driver, "supplier_linkx", "\t\t PASSED", ""+"\t\t FAILED", logger,true, rDefaultPath,transactions);
 		}*/
-		ext.transamrt_login(driver, logger, rDefaultPath,username,password);
+		////ext.transamrt_login(driver, logger, rDefaultPath,username,password);
 		Thread.sleep(2000);	
 		utils.ClickObject(driver, "supplier_tab", rDefaultPath+supplier);
 			
@@ -1750,7 +1750,7 @@ public void Merchant_on_boarding_wizard(WebDriver driver, ExtentTest logger, Str
 		}else{
 			utils.ExtentLogPassFail(driver, "supplier_linkx", "\t\t PASSED", ""+"\t\t FAILED", logger,true, rDefaultPath,transactions);
 		}*/
-		ext.transamrt_login(driver, logger, rDefaultPath,username,password);
+		////ext.transamrt_login(driver, logger, rDefaultPath,username,password);
 		Thread.sleep(2000);	
 		utils.ClickObject(driver, "supplier_tab", rDefaultPath+supplier);
 		

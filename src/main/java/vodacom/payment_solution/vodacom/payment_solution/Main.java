@@ -8,6 +8,9 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.codoid.products.fillo.Recordset;
 
+import Supplier.Supplier;
+import Transactions.Transactions;
+import eshop_merchant.eshop_merchant;
 import transmart_properties.properties;
 import transmart_properties.properties_extender;
 
@@ -27,6 +30,10 @@ public class Main {
 	static properties_extender ext=new properties_extender();
 	static UtilityFunctions utils = new UtilityFunctions();
 	static properties  prop = new properties();
+	static eshop_merchant eshop= new eshop_merchant();
+	static Transactions trans =new Transactions();
+	static Supplier Supplier = new Supplier();
+	
 	static ExtentTest logger;
 	static  ExtentReports extent;
 	Sheet sheet;
@@ -34,7 +41,7 @@ public class Main {
 	static String sDefaultPath;
 	static String dDefaultPath;//excel external file folder
 	static String rDefaultPath;//repository folder
-	ResultSet resultset;
+	ResultSet resultset; 
 	
 	static String browers;
 	static WebDriver driver ;
@@ -73,7 +80,8 @@ public class Main {
 	}
 	//transactions 
 	@Test
-	public void T_02_Eshop_Payments_Preauthandsettle() throws Exception {		
+	public void T_02_Eshop_Payments_Preauthandsettle() throws Exception {	
+		
 		//preparing to execute preauth and settle transactions
 		        testcase=getdata.ReadData("Controller", "transactions", "TEST CASES", 2);
 		        execute=getdata.ReadData("Controller", "transactions", "EXECUTE", 2);
@@ -84,7 +92,7 @@ public class Main {
 		    		logger.assignAuthor("Author:\t\tAlex\t\t\t\tKwenene");	
 		        	driver = utils.initializeWedriver(browers, sDefaultPath);		        	
 		    		Thread.sleep(3000);		
-		    		prop.T_0003_transactions_Payments_Preauth_and_Settle(driver, logger, sDefaultPath);
+		    		eshop.T_0003_transactions_Payments_Preauth_and_Settle(driver, logger, sDefaultPath);
 		    		Thread.sleep(2000);			
 		    		driver.close();
 		    		extent.flush();	
@@ -92,10 +100,12 @@ public class Main {
 		        }else {
 		        	
 		        }
-			}
+		}
+		
 	
 	@Test
-	public void T_03_Eshop_Payments_Preauth() throws Exception {		
+	public void T_03_Eshop_Payments_Preauth() throws Exception {	
+		
 			//preparing to execute Preauth transactions
 		        testcase=getdata.ReadData("Controller", "transactions", "TEST CASES",10);
 		        execute=getdata.ReadData("Controller", "transactions", "EXECUTE", 10);
@@ -106,7 +116,7 @@ public class Main {
 		    		logger.assignAuthor("Author:\t\tAlex\t\t\t\tKwenene");	
 		        	driver = utils.initializeWedriver(browers, sDefaultPath);		        	
 		    		Thread.sleep(3000);		
-		    		prop.T_0002_transactions_Payments_Preauth(driver, logger, sDefaultPath);
+		    		eshop.T_0002_transactions_Payments_Preauth(driver, logger, sDefaultPath);
 		    		Thread.sleep(2000);			
 		    		driver.close();
 		    		extent.flush();	
@@ -116,7 +126,8 @@ public class Main {
 		        }
 			}
 	@Test
-	public void T_04_Eshop_Payments_auth() throws Exception {		
+	public void T_04_Eshop_Payments_auth() throws Exception {	
+		
 			//preparing to execute auth transactions
 		        testcase=getdata.ReadData("Controller", "transactions", "TEST CASES", 11);
 		        execute=getdata.ReadData("Controller", "transactions", "EXECUTE", 11);
@@ -127,7 +138,7 @@ public class Main {
 		    		logger.assignAuthor("Author:\t\tAlex\t\t\t\tKwenene");	
 		        	driver = utils.initializeWedriver(browers, sDefaultPath);		        	
 		    		Thread.sleep(3000);		
-		    		prop.T_0004_transactions_Payments_Auth(driver, logger, sDefaultPath);
+		    		eshop.T_0004_transactions_Payments_Auth(driver, logger, sDefaultPath);
 		    		Thread.sleep(2000);			
 		    		driver.close();
 		    		extent.flush();	
@@ -149,7 +160,7 @@ public class Main {
 		    		logger.assignAuthor("Author:\t\tAlex\t\t\t\tKwenene");	
 		        	driver = utils.initializeWedriver(browers, sDefaultPath);		        	
 		    		Thread.sleep(3000);		
-		    		prop.find_transactions(driver, logger, sDefaultPath);
+		    		trans.find_transactions(driver, logger, sDefaultPath);
 		    		Thread.sleep(2000);			
 		    		driver.close();
 		    		extent.flush();	
@@ -171,7 +182,7 @@ public class Main {
 		    		logger.assignAuthor("Author:\t\tAlex\t\t\t\tKwenene");	
 		        	driver = utils.initializeWedriver(browers, sDefaultPath);		        	
 		    		Thread.sleep(3000);		
-		    		prop.find_transactions_back(driver, logger, sDefaultPath);
+		    		trans.find_transactions_back(driver, logger, sDefaultPath);
 		    		Thread.sleep(2000);			
 		    		driver.close();
 		    		extent.flush();	
@@ -194,7 +205,7 @@ public class Main {
 				logger.assignCategory("Category:\t\tTRANSMAT\t\t PAYMENT \t\t SOLUTIONS");
 				logger.assignAuthor("Author:\t\tAlex\t\t\t\tKwenene");	
 				driver = utils.initializeWedriver(browers, sDefaultPath);
-				prop.T_0005_view_transactions(driver, logger, sDefaultPath);
+				//trans.T_0005_view_transactions(driver, logger, sDefaultPath);
 				Thread.sleep(2000);			
 				Thread.sleep(2000);			
 				driver.close();
@@ -217,7 +228,7 @@ public class Main {
 				logger.assignCategory("Category:\t\tTRANSMAT\t\t PAYMENT \t\t SOLUTIONS");
 				logger.assignAuthor("Author:\t\tAlex\t\t\t\tKwenene");	
 				driver = utils.initializeWedriver(browers, sDefaultPath);
-				prop.T_0005_view_transactions_front(driver, logger, sDefaultPath);
+				trans.T_0005_view_transactions_front(driver, logger, sDefaultPath);
 				Thread.sleep(2000);			
 				Thread.sleep(2000);			
 				driver.close();
@@ -238,7 +249,7 @@ public class Main {
 				logger.assignCategory("Category:\t\tTRANSMAT\t\t PAYMENT \t\t SOLUTIONS");
 				logger.assignAuthor("Author:\t\tAlex\t\t\t\tKwenene");	
 				driver = utils.initializeWedriver(browers, sDefaultPath);
-				prop.T_0006_refund_transactions(driver, logger, sDefaultPath);
+				trans.T_0006_refund_transactions(driver, logger, sDefaultPath);
 				Thread.sleep(2000);			
 				Thread.sleep(2000);			
 				driver.close();
@@ -260,7 +271,7 @@ public class Main {
 		    		logger.assignAuthor("Author:\t\tAlex\t\t\t\tKwenene");	
 		        	driver = utils.initializeWedriver(browers, sDefaultPath);		        	
 		    		Thread.sleep(3000);		
-		    		prop.confirm_refund(driver, logger, sDefaultPath);
+		    		trans.confirm_refund(driver, logger, sDefaultPath);
 		    		Thread.sleep(2000);			
 		    		driver.close();
 		    		extent.flush();	
@@ -281,7 +292,7 @@ public class Main {
 		    		logger.assignAuthor("Author:\t\tAlex\t\t\t\tKwenene");	
 		        	driver = utils.initializeWedriver(browers, sDefaultPath);		        	
 		    		Thread.sleep(3000);		
-		    		prop.reject_refund(driver, logger, sDefaultPath);
+		    		trans.reject_refund(driver, logger, sDefaultPath);
 		    		Thread.sleep(2000);			
 		    		driver.close();
 		    		extent.flush();	
@@ -304,7 +315,7 @@ public class Main {
 		        	driver = utils.initializeWedriver(browers, sDefaultPath);		        	
 		    		Thread.sleep(3000);		
 		    		
-		    		prop.charge_back(driver, logger, sDefaultPath);
+		    		trans.charge_back(driver, logger, sDefaultPath);
 		    		Thread.sleep(2000);			
 		    		driver.close();
 		    		extent.flush();	
@@ -325,7 +336,7 @@ public class Main {
 	    		logger.assignAuthor("Author:\t\tAlex\t\t\t\tKwenene");	
 	        	driver = utils.initializeWedriver(browers, sDefaultPath);		        	
 	    		Thread.sleep(3000);		
-	    		prop.Confirm_charge_back(driver, logger, sDefaultPath);
+	    		trans.Confirm_charge_back(driver, logger, sDefaultPath);
 	    		Thread.sleep(2000);			
 	    		driver.close();
 	    		extent.flush();	
@@ -346,7 +357,7 @@ public class Main {
 	    		logger.assignAuthor("Author:\t\tAlex\t\t\t\tKwenene");	
 	        	driver = utils.initializeWedriver(browers, sDefaultPath);		        	
 	    		Thread.sleep(3000);		
-	    		prop.Transaction_Status_Report(driver, logger, sDefaultPath);
+	    		trans.Transaction_Status_Report(driver, logger, sDefaultPath);
 	    		Thread.sleep(2000);			
 	    		driver.close();
 	    		extent.flush();	
@@ -367,7 +378,7 @@ public class Main {
 	    		logger.assignAuthor("Author:\t\tAlex\t\t\t\tKwenene");	
 	        	driver = utils.initializeWedriver(browers, sDefaultPath);		        	
 	    		Thread.sleep(3000);		
-	    		//prop.reject_refund(driver, logger, sDefaultPath);
+	    		//trans.reject_refund(driver, logger, sDefaultPath);
 	    		Thread.sleep(2000);			
 	    		driver.close();
 	    		extent.flush();	
@@ -388,7 +399,7 @@ public class Main {
 	    		logger.assignAuthor("Author:\t\tAlex\t\t\t\tKwenene");	
 	        	driver = utils.initializeWedriver(browers, sDefaultPath);		        	
 	    		Thread.sleep(3000);		
-	    		prop.Multiple_Refunds(driver, logger, sDefaultPath);
+	    		trans.Multiple_Refunds(driver, logger, sDefaultPath);
 	    		Thread.sleep(2000);			
 	    		driver.close();
 	    		extent.flush();	
@@ -409,7 +420,7 @@ public class Main {
 	    		logger.assignAuthor("Author:\t\tAlex\t\t\t\tKwenene");	
 	        	driver = utils.initializeWedriver(browers, sDefaultPath);		        	
 	    		Thread.sleep(3000);		
-	    		prop.Multiple_Chargebacks(driver, logger, sDefaultPath);
+	    		trans.Multiple_Chargebacks(driver, logger, sDefaultPath);
 	    		Thread.sleep(2000);			
 	    		driver.close();
 	    		extent.flush();	
@@ -431,7 +442,7 @@ public class Main {
 	    		logger.assignAuthor("Author:\t\tAlex\t\t\t\tKwenene");	
 	        	driver = utils.initializeWedriver(browers, sDefaultPath);		        	
 	    		Thread.sleep(3000);		
-	    		//prop.reject_refund(driver, logger, sDefaultPath);
+	    		//trans.reject_refund(driver, logger, sDefaultPath);
 	    		Thread.sleep(2000);			
 	    		driver.close();
 	    		extent.flush();	
@@ -452,7 +463,7 @@ public class Main {
 	    		logger.assignAuthor("Author:\t\tAlex\t\t\t\tKwenene");	
 	        	driver = utils.initializeWedriver(browers, sDefaultPath);		        	
 	    		Thread.sleep(3000);		
-	    		prop.Sales_Summary(driver, logger, sDefaultPath);
+	    		trans.Sales_Summary(driver, logger, sDefaultPath);
 	    		Thread.sleep(2000);			
 	    		driver.close();
 	    		extent.flush();	
@@ -473,7 +484,7 @@ public class Main {
 	    		logger.assignAuthor("Author:\t\tAlex\t\t\t\tKwenene");	
 	        	driver = utils.initializeWedriver(browers, sDefaultPath);		        	
 	    		Thread.sleep(3000);		
-	    		prop.View_Payment_Changes(driver, logger, sDefaultPath);
+	    		trans.View_Payment_Changes(driver, logger, sDefaultPath);
 	    		Thread.sleep(2000);			
 	    		driver.close();
 	    		extent.flush();	
@@ -494,7 +505,7 @@ public class Main {
 	    		logger.assignAuthor("Author:\t\tAlex\t\t\t\tKwenene");	
 	        	driver = utils.initializeWedriver(browers, sDefaultPath);		        	
 	    		Thread.sleep(3000);		
-	    		prop.Settle_Transaction(driver, logger, sDefaultPath);
+	    		trans.Settle_Transaction(driver, logger, sDefaultPath);
 	    		Thread.sleep(2000);			
 	    		//driver.close();
 	    		extent.flush();	
@@ -515,7 +526,7 @@ public class Main {
 	    		logger.assignAuthor("Author:\t\tAlex\t\t\t\tKwenene");	
 	        	driver = utils.initializeWedriver(browers, sDefaultPath);		        	
 	    		Thread.sleep(3000);		
-	    		prop.Supplier_Statement(driver, logger, sDefaultPath);
+	    		trans.Supplier_Statement(driver, logger, sDefaultPath);
 	    		Thread.sleep(2000);			
 	    		driver.close();
 	    		extent.flush();	
@@ -536,7 +547,7 @@ public class Main {
 	    		logger.assignAuthor("Author:\t\tAlex\t\t\t\tKwenene");	
 	        	driver = utils.initializeWedriver(browers, sDefaultPath);		        	
 	    		Thread.sleep(3000);		
-	    		prop.Confirm_Multiple_Chargebacks(driver, logger, sDefaultPath);
+	    		trans.Confirm_Multiple_Chargebacks(driver, logger, sDefaultPath);
 	    		Thread.sleep(2000);			
 	    		driver.close();
 	    		extent.flush();	
@@ -557,7 +568,7 @@ public class Main {
 	    		logger.assignAuthor("Author:\t\tAlex\t\t\t\tKwenene");	
 	        	driver = utils.initializeWedriver(browers, sDefaultPath);		        	
 	    		Thread.sleep(3000);		
-	    		prop.Reverse_Multiple_Chargebacks(driver, logger, sDefaultPath);
+	    		trans.Reverse_Multiple_Chargebacks(driver, logger, sDefaultPath);
 	    		Thread.sleep(2000);			
 	    		driver.close();
 	    		extent.flush();	
@@ -578,7 +589,7 @@ public class Main {
 	    		logger.assignAuthor("Author:\t\tAlex\t\t\t\tKwenene");	
 	        	driver = utils.initializeWedriver(browers, sDefaultPath);		        	
 	    		Thread.sleep(3000);		
-	    		//prop.reject_refund(driver, logger, sDefaultPath);
+	    		//trans.reject_refund(driver, logger, sDefaultPath);
 	    		Thread.sleep(2000);			
 	    		driver.close();
 	    		extent.flush();	
@@ -599,7 +610,7 @@ public class Main {
 	    		logger.assignAuthor("Author:\t\tAlex\t\t\t\tKwenene");	
 	        	driver = utils.initializeWedriver(browers, sDefaultPath);		        	
 	    		Thread.sleep(3000);		
-	    		//prop.reject_refund(driver, logger, sDefaultPath);
+	    		//trans.reject_refund(driver, logger, sDefaultPath);
 	    		Thread.sleep(2000);			
 	    		driver.close();
 	    		extent.flush();	
@@ -620,7 +631,7 @@ public class Main {
 	    		logger.assignAuthor("Author:\t\tAlex\t\t\t\tKwenene");	
 	        	driver = utils.initializeWedriver(browers, sDefaultPath);		        	
 	    		Thread.sleep(3000);		
-	    		//prop.reject_refund(driver, logger, sDefaultPath);
+	    		//trans.reject_refund(driver, logger, sDefaultPath);
 	    		Thread.sleep(2000);			
 	    		driver.close();
 	    		extent.flush();	
@@ -641,7 +652,7 @@ public class Main {
 	    		logger.assignAuthor("Author:\t\tAlex\t\t\t\tKwenene");	
 	        	driver = utils.initializeWedriver(browers, sDefaultPath);		        	
 	    		Thread.sleep(3000);		
-	    		//prop.reject_refund(driver, logger, sDefaultPath);
+	    		//trans.reject_refund(driver, logger, sDefaultPath);
 	    		Thread.sleep(2000);			
 	    		driver.close();
 	    		extent.flush();	
@@ -662,7 +673,7 @@ public class Main {
 	    		logger.assignAuthor("Author:\t\tAlex\t\t\t\tKwenene");	
 	        	driver = utils.initializeWedriver(browers, sDefaultPath);		        	
 	    		Thread.sleep(3000);		
-	    		prop.Reverse_Chargebacks(driver, logger, sDefaultPath);
+	    		trans.Reverse_Chargebacks(driver, logger, sDefaultPath);
 	    		Thread.sleep(2000);			
 	    		driver.close();
 	    		extent.flush();	
@@ -683,7 +694,7 @@ public class Main {
 	    		logger.assignAuthor("Author:\t\tAlex\t\t\t\tKwenene");	
 	        	driver = utils.initializeWedriver(browers, sDefaultPath);		        	
 	    		Thread.sleep(3000);		
-	    		//prop.reject_refund(driver, logger, sDefaultPath);
+	    		//trans.reject_refund(driver, logger, sDefaultPath);
 	    		Thread.sleep(2000);			
 	    		driver.close();
 	    		extent.flush();	
@@ -704,7 +715,7 @@ public class Main {
 	    		logger.assignAuthor("Author:\t\tAlex\t\t\t\tKwenene");	
 	        	driver = utils.initializeWedriver(browers, sDefaultPath);		        	
 	    		Thread.sleep(3000);		
-	    		//prop.reject_refund(driver, logger, sDefaultPath);
+	    		//trans.reject_refund(driver, logger, sDefaultPath);
 	    		Thread.sleep(2000);			
 	    		driver.close();
 	    		extent.flush();	
@@ -725,7 +736,7 @@ public class Main {
 	    		logger.assignAuthor("Author:\t\tAlex\t\t\t\tKwenene");	
 	        	driver = utils.initializeWedriver(browers, sDefaultPath);		        	
 	    		Thread.sleep(3000);		
-	    		prop.Cancel_Preauthorisation(driver, logger, sDefaultPath);
+	    		trans.Cancel_Preauthorisation(driver, logger, sDefaultPath);
 	    		Thread.sleep(2000);			
 	    		//driver.close();
 	    		extent.flush();	
@@ -749,7 +760,7 @@ public class Main {
 		    		logger.assignAuthor("Author:\t\tAlex\t\t\t\tKwenene");	
 		        	driver = utils.initializeWedriver(browers, sDefaultPath);		        	
 		    		Thread.sleep(3000);		
-		    		prop.Merchant_on_boarding(driver, logger, sDefaultPath);
+		    		Supplier.Merchant_on_boarding(driver, logger, sDefaultPath);
 		    		Thread.sleep(2000);			
 		    		driver.close();
 		    		extent.flush();	
@@ -770,7 +781,7 @@ public class Main {
 		    		logger.assignAuthor("Author:\t\tAlex\t\t\t\tKwenene");	
 		        	driver = utils.initializeWedriver(browers, sDefaultPath);		        	
 		    		Thread.sleep(3000);		
-		    		prop.Merchant_on_boarding_wizard(driver, logger, sDefaultPath);
+		    		Supplier.Merchant_on_boarding_wizard(driver, logger, sDefaultPath);
 		    		Thread.sleep(2000);			
 		    		driver.close();
 		    		extent.flush();	

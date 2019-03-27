@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<manage_commission_structure>
+	<parameter>
+	            <manage_commission_link>
+				<identifier>LINKTEXT</identifier>
+				<Element>Manage Commission Structures</Element>
+				</manage_commission_link>
+				
+				<view_btn>
+				<identifier>id</identifier>
+				<Element>viewButton_41_10301_0</Element>
+				</view_btn>			
+			
+				<delete_btn>
+				<identifier>id</identifier>
+				<Element>deleteButton_41_10301_0</Element>
+				</delete_btn>				
+							
+	</parameter>
+</manage_commission_structure>

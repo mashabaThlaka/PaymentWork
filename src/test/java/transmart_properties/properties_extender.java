@@ -57,7 +57,10 @@ public class properties_extender {
 		dDefaultPath=sDefaultPath+dpath;// assigning a new data folder for external file 		
 		rDefaultPath=sDefaultPath+rpath;// assigning a new repository folder
 		screenshot=sDefaultPath+login_screenshots;// assigning a new screenshot folder
+	//	System.out.println(username);
+	//	System.out.println(password);
 		try {
+			
 			//read data
 			/*
 			url=getdata.ReadData("DataExcel","login", "login-url", 2);
@@ -77,25 +80,18 @@ public class properties_extender {
 		    Thread.sleep(2000);
 		    utils.RefreshPage();
 		    Thread.sleep(2000);
-		    
+		   // utils.EnterText(driver, "username", username, rDefaultPath+login);
 	  for(int i=0;i<2;i++) {
-		    //inserting data
-		  if(utils.checkIfObjectExists(driver, "username", rDefaultPath+login)) {
-			  //int a=1;
-			  if(i<=0) {
-			  utils.ExtentLogPassFail(driver, "username", " \t\t PASSED", ""+"\t\t FAILED", logger,true, rDefaultPath,login);
-			  }
+		 		    //inserting data
+					
 			  utils.EnterText(driver, "username", username, rDefaultPath+login);
-		  }else {
-			  utils.ExtentLogPassFail(driver, "username", " \t\t PASSED", ""+"\t\t FAILED", logger,true, rDefaultPath,login);
-		  }
-		    
+				    
 		    utils.EnterText(driver, "password", password, rDefaultPath+login);
 		    Thread.sleep(2000);
 		    
 		   //utils.ExtentLogPassFail(driver, "loginbtn", "STEP 2\t\t PASSED","STEP 3 \t\t FAILED", logger,true, rDefaultPath,frontoffice);
 		    utils.ClickObject(driver, "loginbtn", rDefaultPath+login);
-		    
+		   
 		 
 		  //  utils.checkIfObjectIsDisplayed(driver, "Secretblock", sDefaultPath+"\\Repository\\transmart_page_2.xml");
 		    //login verification 
@@ -181,14 +177,9 @@ public class properties_extender {
 		   // utils.ExtentLogPassFail(driver, "LoginButton", "STEP 3\t\t PASSED","STEP 3 \t\t FAILED", logger,true, rDefaultPath,frontoffice);
 		   
 		    
-		    if(utils.checkIfObjectExists(driver, "LoginButton", rDefaultPath+login)) {
-		    	if(i<=0) {
-				 utils.ExtentLogPassFail(driver, "LoginButton", " \t\t PASSED", ""+"\t\t FAILED", logger,true, rDefaultPath,login);
-		    	}
+		  
 				  utils.ClickObject(driver, "LoginButton", rDefaultPath+login);
-			  }else {
-				  utils.ExtentLogPassFail(driver, "LoginButtonx", " \t\t PASSED", ""+"\t\t FAILED", logger,true, rDefaultPath,login);
-			  }
+			 
 		  
 		    //utils.ExtentLogPassFail(driver, "find", "STEP 4\t\t PASSED","STEP 4 \t\t FAILED", logger,true, rDefaultPath,frontoffice);
 			

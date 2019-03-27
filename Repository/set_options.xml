@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<set_options>
+	<parameter>
+	
+	
+	
+				<supplier_tab>
+				<identifier>id</identifier>
+				<Element>ui-id-2</Element>
+				</supplier_tab>
+				
+	            <set_options_link>
+				<identifier>xpath</identifier>
+				<Element>//*[@id="tabs-2"]/table/tbody/tr/td[1]/a[3]</Element>
+				</set_options_link>
+				
+				<supplier_select>
+				<identifier>id</identifier>
+				<Element>Supplier</Element>
+				</supplier_select>
+				
+				<suppier_select_btn>
+				<identifier>id</identifier>
+				<Element>btnSubmit</Element>
+				</suppier_select_btn>	
+				
+				<blacklist_card_checkbx>
+				<identifier>id</identifier>
+				<Element>BlacklistCardOnRefund</Element>
+				</blacklist_card_checkbx>	
+				
+					
+				<currency_select>
+				<identifier>id</identifier>
+				<Element>Currency</Element>
+				</currency_select>
+				
+				<daily_supplier_txt>
+				<identifier>id</identifier>
+				<Element>DailySupplierCardLimit</Element>
+				</daily_supplier_txt>
+				
+				<days_to_clear_chq>
+				<identifier>id</identifier>
+				<Element>DaysToClearCheque</Element>
+				</days_to_clear_chq>
+				
+				<mark_cheque_checkbx>
+				<identifier>id</identifier>
+				<Element>MarkChequeCleared</Element>
+				</mark_cheque_checkbx>
+				
+				<mimecast_short_code>
+				<identifier>id</identifier>
+				<Element>MimecastShortCode</Element>
+				</mimecast_short_code>
+				
+				<reverse_fees_checkbx>
+				<identifier>id</identifier>
+				<Element>ReverseFees</Element>
+				</reverse_fees_checkbx>
+				
+				<rfees_charge_back_checkbx>
+				<identifier>id</identifier>
+				<Element>ReverseFeesInChargeback</Element>
+				</rfees_charge_back_checkbx>
+				
+				<send_customer_confirmation_checkbx>
+				<identifier>id</identifier>
+				<Element>SendCustomerConfirmation</Element>
+				</send_customer_confirmation_checkbx>
+				
+				<send_customer_invoice_checkbx>
+				<identifier>id</identifier>
+				<Element>SendCustomerInvoice</Element>
+				</send_customer_invoice_checkbx>
+				
+				<send_purchase_order_checkbx>
+				<identifier>id</identifier>
+				<Element>SendPurchaseOrder</Element>
+				</send_purchase_order_checkbx>
+				
+				<send_supplier_fee_inv_checkbx>
+				<identifier>id</identifier>
+				<Element>SendSupplierFeeInvoice</Element>
+				</send_supplier_fee_inv_checkbx>
+				
+				
+				<send_supplier_selfbill_inv_checkbx>
+				<identifier>id</identifier>
+				<Element>SendSupplierSelfbillInvoice</Element>
+				</send_supplier_selfbill_inv_checkbx>
+				
+				<settle_days_txt>
+				<identifier>id</identifier>
+				<Element>SettleDays</Element>
+				</settle_days_txt>
+				
+			   <save_btn>
+				<identifier>id</identifier>
+				<Element>submit</Element>
+				</save_btn>
+				
+				
+				<page_info_msg>
+				<identifier>xpath</identifier>
+				<Element>//*[@id='content']/table/tbody/tr/td/text()</Element>
+				</page_info_msg>
+				
+				
+	</parameter>
+</set_options>

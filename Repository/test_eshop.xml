@@ -61,6 +61,43 @@
 	<Element>ccsubmit</Element>
 	</btn_continue>
 	
+	<payment_changes>
+	<identifier>LINKTEXT</identifier>
+	<Element>View Payment Changes</Element>
+	</payment_changes>
+	
+	<Supplierlink>
+	<identifier>LINKTEXT</identifier>
+	<Element>Supplier</Element>
+	</Supplierlink>
+	
+	<Supplier_setup>
+	<identifier>LINKTEXT</identifier>
+	<Element>View Supplier Setup</Element>
+	</Supplier_setup>
+	
+	<Transaction_Fees>
+	<identifier>CSSSELECTOR</identifier>
+	<Element>#content > table > tbody > tr > td > span:nth-child(1)</Element>
+	</Transaction_Fees>
+	
+	<Transaction_Fees1>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="content"]/table/tbody/tr/td/span[1]</Element>
+	</Transaction_Fees1>
+	
+	<Lookup>
+	<identifier>LINKTEXT</identifier>
+	<Element>Supplier Details Lookup</Element>
+	</Lookup>
+	
+	<button_submit>
+	<identifier>ID</identifier>
+	<Element>btnSubmit</Element>
+	</button_submit>
+	
+	
+	
 	<btn_continue2>
 	<identifier>xpath</identifier>
 	<Element>//*[@id="submit"]</Element>
@@ -70,10 +107,22 @@
 	<identifier>CSSSELECTOR</identifier>
 	<Element>body > div > table > tbody > tr > td > table > tbody > tr:nth-child(8) > td:nth-child(2)</Element>
 	</results>
+	
 	<CorrelationIdentifier>
 	<identifier>CSSSELECTOR</identifier>
 	<Element></Element>
 	</CorrelationIdentifier>
+	
+	<General_Details>
+	<identifier>CSSSELECTOR</identifier>
+	<Element>#content > table > tbody > tr:nth-child(1) > th:nth-child(1)</Element>
+	</General_Details>
+	
+	<General_Details1>
+	<identifier>xpath</identifier>
+	<Element>//*[@id="content"]/table</Element>
+	</General_Details1>
+	
 	<ErrorCode>
 	<identifier>CSSSELECTOR</identifier>
 	<Element>.reportTable > tbody:nth-child(1) > tr:nth-child(9) > td:nth-child(2)</Element>

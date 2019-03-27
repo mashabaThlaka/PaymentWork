@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eshop>
+	<parameter>
+	
+		<eshop_btn>
+		<identifier>CSSSELECTOR</identifier>
+		<Element>Transactions</Element>
+		</eshop_btn>
+		
+		<Transactions>
+		<identifier>LINKTEXT</identifier>
+		<Element>Transactions</Element>
+		</Transactions>
+		
+		<view>
+		<identifier>xpath</identifier>
+		<Element>//*[@id="tabs-4"]/table/tbody/tr/td[1]/a[1]</Element>
+		</view>
+		
+		<name>
+		<identifier>NAME</identifier>
+		<Element>MSISDN</Element>
+		</name>
+		
+		<viewd>
+		<identifier>NAME</identifier>
+		<Element>View</Element>
+		</viewd>
+		
+		<viewbtn>
+		<identifier>NAME</identifier>
+		<Element>viewButton</Element>
+		</viewbtn>
+	
+		
+	</parameter>
+</eshop>	

@@ -1,0 +1,2491 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/6d3843c29c354373fafad29c03a1a89b7e06c374/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>ExtentReports</title>
+
+</head>
+
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+				<li class='waves-effect'><a href='#!' view='author-view' onclick="configureView(3)"><i class='material-icons'>person</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>ExtentReports</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>Mar 15, 2019 03:24:09 PM</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>v3.0.6</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>Category:		TRANSMAT		PAYMENT		SOLUTIONS</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Tests</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='96.552%'><span class='strong'>28</span> test(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='3.448%'>1</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='99.291%'><span class='strong'>140</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='0.709%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Tests</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>Eshop Payments Preauth+Settle</span>
+						<span class='test-time'>Mar 15, 2019 03:24:14 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 15, 2019 03:24:14 PM</span>
+	<span class='label end-time'>Mar 15, 2019 03:26:04 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 50s+137ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Category:		TRANSMAT		PAYMENT		SOLUTIONS</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>Author:		Alex				Kwenene</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:25:09 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152508.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152508.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152508.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:25:14 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152514.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152514.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152514.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:25:32 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152532.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152532.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152532.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:25:39 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152539.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152539.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152539.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:26:04 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152604.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152604.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152604.png'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>Eshop Payments Preauth+Settle</span>
+						<span class='test-time'>Mar 15, 2019 03:26:07 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 15, 2019 03:26:07 PM</span>
+	<span class='label end-time'>Mar 15, 2019 03:27:17 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 9s+738ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Category:		TRANSMAT		PAYMENT		SOLUTIONS</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>Author:		Alex				Kwenene</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:26:26 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152626.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152626.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152626.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:26:30 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152630.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152630.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152630.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:26:47 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152647.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152647.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152647.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:26:53 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152653.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152653.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152653.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:27:17 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152717.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152717.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152717.png'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>Eshop Payments Preauth+Settle</span>
+						<span class='test-time'>Mar 15, 2019 03:27:19 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 15, 2019 03:27:19 PM</span>
+	<span class='label end-time'>Mar 15, 2019 03:28:30 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 11s+293ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Category:		TRANSMAT		PAYMENT		SOLUTIONS</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>Author:		Alex				Kwenene</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:27:38 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152738.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152738.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152738.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:27:42 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152742.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152742.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152742.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:28:00 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152800.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152800.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152800.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:28:06 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152806.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152806.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152806.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:28:30 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152830.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152830.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152830.png'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>Eshop Payments Preauth+Settle</span>
+						<span class='test-time'>Mar 15, 2019 03:28:32 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 15, 2019 03:28:32 PM</span>
+	<span class='label end-time'>Mar 15, 2019 03:29:43 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 10s+849ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Category:		TRANSMAT		PAYMENT		SOLUTIONS</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>Author:		Alex				Kwenene</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:28:52 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152852.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152852.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152852.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:28:57 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152857.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152857.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152857.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:29:14 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152914.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152914.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152914.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:29:20 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152920.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152920.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152920.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:29:43 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152943.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152943.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_152943.png'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>Eshop Payments Preauth+Settle</span>
+						<span class='test-time'>Mar 15, 2019 03:29:46 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 15, 2019 03:29:46 PM</span>
+	<span class='label end-time'>Mar 15, 2019 03:30:55 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 9s+381ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Category:		TRANSMAT		PAYMENT		SOLUTIONS</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>Author:		Alex				Kwenene</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:30:04 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153004.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153004.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153004.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:30:08 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153008.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153008.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153008.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:30:26 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153026.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153026.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153026.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:30:31 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153031.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153031.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153031.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:30:55 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153055.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153055.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153055.png'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>Eshop Payments Preauth+Settle</span>
+						<span class='test-time'>Mar 15, 2019 03:30:57 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 15, 2019 03:30:57 PM</span>
+	<span class='label end-time'>Mar 15, 2019 03:32:07 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 9s+619ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Category:		TRANSMAT		PAYMENT		SOLUTIONS</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>Author:		Alex				Kwenene</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:31:16 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153116.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153116.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153116.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:31:21 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153121.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153121.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153121.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:31:38 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153138.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153138.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153138.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:31:44 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153143.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153143.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153143.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:32:07 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153207.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153207.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153207.png'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>Eshop Payments Preauth+Settle</span>
+						<span class='test-time'>Mar 15, 2019 03:32:09 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 15, 2019 03:32:09 PM</span>
+	<span class='label end-time'>Mar 15, 2019 03:33:19 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 10s+178ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Category:		TRANSMAT		PAYMENT		SOLUTIONS</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>Author:		Alex				Kwenene</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:32:28 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153228.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153228.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153228.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:32:33 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153233.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153233.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153233.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:32:50 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153250.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153250.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153250.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:32:56 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153256.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153256.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153256.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:33:19 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153319.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153319.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153319.png'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='8'>
+					<div class='test-heading'>
+						<span class='test-name'>Eshop Payments Preauth+Settle</span>
+						<span class='test-time'>Mar 15, 2019 03:33:22 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 15, 2019 03:33:22 PM</span>
+	<span class='label end-time'>Mar 15, 2019 03:34:31 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 9s+673ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Category:		TRANSMAT		PAYMENT		SOLUTIONS</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>Author:		Alex				Kwenene</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:33:40 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153340.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153340.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153340.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:33:45 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153345.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153345.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153345.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:34:02 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153402.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153402.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153402.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:34:08 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153408.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153408.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153408.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:34:31 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153431.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153431.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153431.png'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='9'>
+					<div class='test-heading'>
+						<span class='test-name'>Eshop Payments Preauth+Settle</span>
+						<span class='test-time'>Mar 15, 2019 03:34:33 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 15, 2019 03:34:33 PM</span>
+	<span class='label end-time'>Mar 15, 2019 03:35:43 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 9s+533ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Category:		TRANSMAT		PAYMENT		SOLUTIONS</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>Author:		Alex				Kwenene</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:34:52 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153452.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153452.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153452.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:34:57 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153457.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153457.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153457.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:35:14 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153514.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153514.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153514.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:35:20 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153520.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153520.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153520.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:35:43 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153543.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153543.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153543.png'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='10'>
+					<div class='test-heading'>
+						<span class='test-name'>Eshop Payments Preauth+Settle</span>
+						<span class='test-time'>Mar 15, 2019 03:35:45 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 15, 2019 03:35:45 PM</span>
+	<span class='label end-time'>Mar 15, 2019 03:36:54 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 9s+194ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Category:		TRANSMAT		PAYMENT		SOLUTIONS</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>Author:		Alex				Kwenene</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:36:04 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153604.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153604.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153604.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:36:08 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153608.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153608.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153608.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:36:25 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153625.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153625.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153625.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:36:31 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153631.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153631.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153631.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:36:54 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153654.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153654.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153654.png'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='11'>
+					<div class='test-heading'>
+						<span class='test-name'>Eshop Payments Preauth+Settle</span>
+						<span class='test-time'>Mar 15, 2019 03:36:57 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 15, 2019 03:36:57 PM</span>
+	<span class='label end-time'>Mar 15, 2019 03:38:06 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 9s+399ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Category:		TRANSMAT		PAYMENT		SOLUTIONS</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>Author:		Alex				Kwenene</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:37:15 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153715.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153715.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153715.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:37:20 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153719.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153719.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153719.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:37:37 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153737.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153737.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153737.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:37:43 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153743.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153743.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153743.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:38:06 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153806.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153806.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153806.png'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='12'>
+					<div class='test-heading'>
+						<span class='test-name'>Eshop Payments Preauth+Settle</span>
+						<span class='test-time'>Mar 15, 2019 03:38:08 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 15, 2019 03:38:08 PM</span>
+	<span class='label end-time'>Mar 15, 2019 03:39:20 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 11s+429ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Category:		TRANSMAT		PAYMENT		SOLUTIONS</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>Author:		Alex				Kwenene</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:38:28 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153828.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153828.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153828.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:38:32 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153832.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153832.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153832.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:38:50 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153850.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153850.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153850.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:38:55 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153855.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153855.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153855.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:39:20 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153920.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153920.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153920.png'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='13'>
+					<div class='test-heading'>
+						<span class='test-name'>Eshop Payments Preauth+Settle</span>
+						<span class='test-time'>Mar 15, 2019 03:39:22 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 15, 2019 03:39:22 PM</span>
+	<span class='label end-time'>Mar 15, 2019 03:39:41 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 18s+668ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Category:		TRANSMAT		PAYMENT		SOLUTIONS</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>Author:		Alex				Kwenene</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>3:39:41 PM</td>
+					<td class='step-details'>FAILED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153941.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153941.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_153941.png'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='14'>
+					<div class='test-heading'>
+						<span class='test-name'>Eshop Payments Preauth+Settle</span>
+						<span class='test-time'>Mar 15, 2019 03:39:44 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 15, 2019 03:39:44 PM</span>
+	<span class='label end-time'>Mar 15, 2019 03:40:54 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 9s+962ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Category:		TRANSMAT		PAYMENT		SOLUTIONS</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>Author:		Alex				Kwenene</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:40:03 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154003.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154003.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154003.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:40:08 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154007.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154007.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154007.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:40:25 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154025.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154025.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154025.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:40:31 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154031.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154031.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154031.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:40:54 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154054.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154054.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154054.png'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='15'>
+					<div class='test-heading'>
+						<span class='test-name'>Eshop Payments Preauth+Settle</span>
+						<span class='test-time'>Mar 15, 2019 03:40:56 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 15, 2019 03:40:56 PM</span>
+	<span class='label end-time'>Mar 15, 2019 03:42:06 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 9s+604ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Category:		TRANSMAT		PAYMENT		SOLUTIONS</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>Author:		Alex				Kwenene</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:41:15 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154115.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154115.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154115.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:41:19 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154119.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154119.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154119.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:41:37 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154137.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154137.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154137.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:41:42 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154142.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154142.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154142.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:42:06 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154206.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154206.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154206.png'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='16'>
+					<div class='test-heading'>
+						<span class='test-name'>Eshop Payments Preauth+Settle</span>
+						<span class='test-time'>Mar 15, 2019 03:42:08 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 15, 2019 03:42:08 PM</span>
+	<span class='label end-time'>Mar 15, 2019 03:43:18 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 9s+493ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Category:		TRANSMAT		PAYMENT		SOLUTIONS</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>Author:		Alex				Kwenene</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:42:26 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154226.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154226.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154226.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:42:31 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154231.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154231.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154231.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:42:48 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154248.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154248.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154248.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:42:54 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154254.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154254.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154254.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:43:18 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154318.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154318.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154318.png'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='17'>
+					<div class='test-heading'>
+						<span class='test-name'>Eshop Payments Preauth+Settle</span>
+						<span class='test-time'>Mar 15, 2019 03:43:20 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 15, 2019 03:43:20 PM</span>
+	<span class='label end-time'>Mar 15, 2019 03:44:30 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 9s+490ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Category:		TRANSMAT		PAYMENT		SOLUTIONS</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>Author:		Alex				Kwenene</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:43:38 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154338.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154338.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154338.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:43:43 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154343.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154343.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154343.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:44:00 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154400.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154400.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154400.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:44:06 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154406.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154406.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154406.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:44:30 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154429.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154429.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154429.png'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='18'>
+					<div class='test-heading'>
+						<span class='test-name'>Eshop Payments Preauth+Settle</span>
+						<span class='test-time'>Mar 15, 2019 03:44:32 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 15, 2019 03:44:32 PM</span>
+	<span class='label end-time'>Mar 15, 2019 03:45:41 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 9s+586ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Category:		TRANSMAT		PAYMENT		SOLUTIONS</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>Author:		Alex				Kwenene</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:44:50 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154450.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154450.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154450.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:44:55 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154455.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154455.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154455.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:45:12 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154512.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154512.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154512.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:45:18 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154518.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154518.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154518.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:45:41 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154541.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154541.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154541.png'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='19'>
+					<div class='test-heading'>
+						<span class='test-name'>Eshop Payments Preauth+Settle</span>
+						<span class='test-time'>Mar 15, 2019 03:45:44 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 15, 2019 03:45:44 PM</span>
+	<span class='label end-time'>Mar 15, 2019 03:46:53 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 9s+362ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Category:		TRANSMAT		PAYMENT		SOLUTIONS</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>Author:		Alex				Kwenene</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:46:02 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154602.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154602.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154602.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:46:06 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154606.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154606.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154606.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:46:24 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154624.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154624.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154624.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:46:30 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154629.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154629.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154629.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:46:53 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154653.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154653.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154653.png'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='20'>
+					<div class='test-heading'>
+						<span class='test-name'>Eshop Payments Preauth+Settle</span>
+						<span class='test-time'>Mar 15, 2019 03:46:55 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 15, 2019 03:46:55 PM</span>
+	<span class='label end-time'>Mar 15, 2019 03:48:05 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 9s+816ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Category:		TRANSMAT		PAYMENT		SOLUTIONS</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>Author:		Alex				Kwenene</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:47:14 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154714.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154714.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154714.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:47:18 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154718.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154718.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154718.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:47:36 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154736.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154736.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154736.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:47:42 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154742.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154742.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154742.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:48:05 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154805.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154805.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154805.png'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='21'>
+					<div class='test-heading'>
+						<span class='test-name'>Eshop Payments Preauth+Settle</span>
+						<span class='test-time'>Mar 15, 2019 03:48:08 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 15, 2019 03:48:08 PM</span>
+	<span class='label end-time'>Mar 15, 2019 03:49:18 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 10s+150ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Category:		TRANSMAT		PAYMENT		SOLUTIONS</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>Author:		Alex				Kwenene</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:48:26 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154826.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154826.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154826.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:48:31 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154831.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154831.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154831.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:48:48 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154848.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154848.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154848.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:48:54 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154854.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154854.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154854.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:49:18 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154918.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154918.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154918.png'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='22'>
+					<div class='test-heading'>
+						<span class='test-name'>Eshop Payments Preauth+Settle</span>
+						<span class='test-time'>Mar 15, 2019 03:49:20 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 15, 2019 03:49:20 PM</span>
+	<span class='label end-time'>Mar 15, 2019 03:50:30 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 9s+667ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Category:		TRANSMAT		PAYMENT		SOLUTIONS</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>Author:		Alex				Kwenene</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:49:38 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154938.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154938.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154938.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:49:43 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154943.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154943.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_154943.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:50:00 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155000.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155000.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155000.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:50:06 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155006.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155006.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155006.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:50:30 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155029.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155029.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155029.png'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='23'>
+					<div class='test-heading'>
+						<span class='test-name'>Eshop Payments Preauth+Settle</span>
+						<span class='test-time'>Mar 15, 2019 03:50:32 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 15, 2019 03:50:32 PM</span>
+	<span class='label end-time'>Mar 15, 2019 03:51:41 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 8s+841ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Category:		TRANSMAT		PAYMENT		SOLUTIONS</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>Author:		Alex				Kwenene</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:50:50 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155050.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155050.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155050.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:50:55 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155055.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155055.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155055.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:51:12 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155112.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155112.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155112.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:51:17 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155117.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155117.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155117.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:51:41 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155141.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155141.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155141.png'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='24'>
+					<div class='test-heading'>
+						<span class='test-name'>Eshop Payments Preauth+Settle</span>
+						<span class='test-time'>Mar 15, 2019 03:51:43 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 15, 2019 03:51:43 PM</span>
+	<span class='label end-time'>Mar 15, 2019 03:52:52 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 8s+889ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Category:		TRANSMAT		PAYMENT		SOLUTIONS</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>Author:		Alex				Kwenene</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:52:01 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155201.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155201.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155201.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:52:06 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155206.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155206.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155206.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:52:23 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155223.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155223.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155223.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:52:29 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155229.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155229.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155229.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:52:52 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155252.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155252.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155252.png'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='25'>
+					<div class='test-heading'>
+						<span class='test-name'>Eshop Payments Preauth+Settle</span>
+						<span class='test-time'>Mar 15, 2019 03:52:54 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 15, 2019 03:52:54 PM</span>
+	<span class='label end-time'>Mar 15, 2019 03:54:03 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 9s+319ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Category:		TRANSMAT		PAYMENT		SOLUTIONS</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>Author:		Alex				Kwenene</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:53:12 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155312.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155312.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155312.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:53:17 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155317.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155317.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155317.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:53:34 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155334.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155334.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155334.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:53:40 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155340.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155340.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155340.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:54:03 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155403.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155403.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155403.png'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='26'>
+					<div class='test-heading'>
+						<span class='test-name'>Eshop Payments Preauth+Settle</span>
+						<span class='test-time'>Mar 15, 2019 03:54:05 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 15, 2019 03:54:05 PM</span>
+	<span class='label end-time'>Mar 15, 2019 03:55:15 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 9s+29ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Category:		TRANSMAT		PAYMENT		SOLUTIONS</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>Author:		Alex				Kwenene</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:54:24 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155424.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155424.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155424.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:54:29 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155429.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155429.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155429.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:54:46 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155446.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155446.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155446.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:54:51 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155451.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155451.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155451.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:55:15 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155514.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155514.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155514.png'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='27'>
+					<div class='test-heading'>
+						<span class='test-name'>Eshop Payments Preauth+Settle</span>
+						<span class='test-time'>Mar 15, 2019 03:55:17 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 15, 2019 03:55:17 PM</span>
+	<span class='label end-time'>Mar 15, 2019 03:56:25 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 8s+740ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Category:		TRANSMAT		PAYMENT		SOLUTIONS</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>Author:		Alex				Kwenene</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:55:35 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155535.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155535.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155535.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:55:39 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155539.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155539.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155539.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:55:57 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155557.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155557.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155557.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:56:02 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155602.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155602.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155602.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:56:25 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155625.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155625.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155625.png'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='28'>
+					<div class='test-heading'>
+						<span class='test-name'>Eshop Payments Preauth+Settle</span>
+						<span class='test-time'>Mar 15, 2019 03:56:28 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 15, 2019 03:56:28 PM</span>
+	<span class='label end-time'>Mar 15, 2019 03:57:38 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 9s+871ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Category:		TRANSMAT		PAYMENT		SOLUTIONS</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>Author:		Alex				Kwenene</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:56:46 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155646.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155646.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155646.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:56:51 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155651.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155651.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155651.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:57:08 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155708.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155708.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155708.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:57:14 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155714.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155714.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155714.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:57:38 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155738.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155738.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155738.png'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='29'>
+					<div class='test-heading'>
+						<span class='test-name'>Eshop Payments Preauth+Settle</span>
+						<span class='test-time'>Mar 15, 2019 03:57:40 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 15, 2019 03:57:40 PM</span>
+	<span class='label end-time'>Mar 15, 2019 03:58:49 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 9s+249ms</span>
+</div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>Category:		TRANSMAT		PAYMENT		SOLUTIONS</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>Author:		Alex				Kwenene</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:57:58 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155758.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155758.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155758.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:58:03 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155803.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155803.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155803.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:58:20 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155820.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155820.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155820.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:58:26 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155826.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155826.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155826.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>3:58:49 PM</td>
+					<td class='step-details'>PASSED<img data-featherlight='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155849.png' width='10%' src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155849.png' data-src='C:\workspace\vodacom.payment_solution\screenshots\ExtentLogFail20190315_155849.png'></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view -->
+<div id='category-view' class='view hide'>
+
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+				
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Categories</h3>
+			<ul id='category-collection' class='category-collection'>
+				
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>Category:		TRANSMAT		PAYMENT		SOLUTIONS</span>
+						<span class='category-status right'>
+							<span class='label pass'>28</span>
+							<span class='label fail'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 28</span>
+							<span class='label red lighten-1 white-text'>Failed: 1</span>
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Mar 15, 2019 03:24:14 PM</td>
+										<td class='linked' test-id='1'>Eshop Payments Preauth+Settle</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 15, 2019 03:26:07 PM</td>
+										<td class='linked' test-id='2'>Eshop Payments Preauth+Settle</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 15, 2019 03:27:19 PM</td>
+										<td class='linked' test-id='3'>Eshop Payments Preauth+Settle</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 15, 2019 03:28:32 PM</td>
+										<td class='linked' test-id='4'>Eshop Payments Preauth+Settle</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 15, 2019 03:29:46 PM</td>
+										<td class='linked' test-id='5'>Eshop Payments Preauth+Settle</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 15, 2019 03:30:57 PM</td>
+										<td class='linked' test-id='6'>Eshop Payments Preauth+Settle</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 15, 2019 03:32:09 PM</td>
+										<td class='linked' test-id='7'>Eshop Payments Preauth+Settle</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 15, 2019 03:33:22 PM</td>
+										<td class='linked' test-id='8'>Eshop Payments Preauth+Settle</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 15, 2019 03:34:33 PM</td>
+										<td class='linked' test-id='9'>Eshop Payments Preauth+Settle</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 15, 2019 03:35:45 PM</td>
+										<td class='linked' test-id='10'>Eshop Payments Preauth+Settle</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 15, 2019 03:36:57 PM</td>
+										<td class='linked' test-id='11'>Eshop Payments Preauth+Settle</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 15, 2019 03:38:08 PM</td>
+										<td class='linked' test-id='12'>Eshop Payments Preauth+Settle</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 15, 2019 03:39:22 PM</td>
+										<td class='linked' test-id='13'>Eshop Payments Preauth+Settle</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Mar 15, 2019 03:39:44 PM</td>
+										<td class='linked' test-id='14'>Eshop Payments Preauth+Settle</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 15, 2019 03:40:56 PM</td>
+										<td class='linked' test-id='15'>Eshop Payments Preauth+Settle</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 15, 2019 03:42:08 PM</td>
+										<td class='linked' test-id='16'>Eshop Payments Preauth+Settle</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 15, 2019 03:43:20 PM</td>
+										<td class='linked' test-id='17'>Eshop Payments Preauth+Settle</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 15, 2019 03:44:32 PM</td>
+										<td class='linked' test-id='18'>Eshop Payments Preauth+Settle</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 15, 2019 03:45:44 PM</td>
+										<td class='linked' test-id='19'>Eshop Payments Preauth+Settle</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 15, 2019 03:46:55 PM</td>
+										<td class='linked' test-id='20'>Eshop Payments Preauth+Settle</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 15, 2019 03:48:08 PM</td>
+										<td class='linked' test-id='21'>Eshop Payments Preauth+Settle</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 15, 2019 03:49:20 PM</td>
+										<td class='linked' test-id='22'>Eshop Payments Preauth+Settle</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 15, 2019 03:50:32 PM</td>
+										<td class='linked' test-id='23'>Eshop Payments Preauth+Settle</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 15, 2019 03:51:43 PM</td>
+										<td class='linked' test-id='24'>Eshop Payments Preauth+Settle</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 15, 2019 03:52:54 PM</td>
+										<td class='linked' test-id='25'>Eshop Payments Preauth+Settle</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 15, 2019 03:54:05 PM</td>
+										<td class='linked' test-id='26'>Eshop Payments Preauth+Settle</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 15, 2019 03:55:17 PM</td>
+										<td class='linked' test-id='27'>Eshop Payments Preauth+Settle</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 15, 2019 03:56:28 PM</td>
+										<td class='linked' test-id='28'>Eshop Payments Preauth+Settle</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Mar 15, 2019 03:57:40 PM</td>
+										<td class='linked' test-id='29'>Eshop Payments Preauth+Settle</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- category view -->
+<div id='author-view' class='view hide'>
+    <section id='controls'>
+        <div class='controls grey lighten-4'>
+            <!-- search -->
+            <div class='chip transparent' alt='Search Authors' title='Search Authors'>
+                <a href="#" class='search-div'>
+                    <i class='material-icons'>search</i> Search
+                </a>
+
+                <div class='input-field left hide'>
+                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Authors...'>
+                </div>
+
+            </div>
+            <!-- search -->
+        </div>
+    </section>
+
+    <div class='subview-left left'>
+
+        <div class='view-summary'>
+            <h5>Authors</h5>
+                <ul id='author-collection' class='author-collection'>
+
+                        <li class='author displayed active'>
+                            <div class='author-heading'>
+                                <span class='author-name'>Author:		Alex				Kwenene</span>
+                                <span class='author-status right'>
+                                        <span class='label pass'>28</span>
+                                        <span class='label fail'>1</span>
+						        </span>
+                            </div>
+                            <div class='author-content hide'>
+                                <div class='author-status-counts'>
+                                    <span class='label green accent-4 white-text'>Passed: 28</span>
+                                    <span class='label red lighten-1 white-text'>Failed: 1</span>
+                                    
+                                </div>
+
+                                <div class='author-tests'>
+                                    <table class='bordered table-results'>
+                                        <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>TestName</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Mar 15, 2019 03:24:14 PM</td>
+                                                <td class='linked' test-id='1'>Eshop Payments Preauth+Settle</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mar 15, 2019 03:26:07 PM</td>
+                                                <td class='linked' test-id='2'>Eshop Payments Preauth+Settle</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mar 15, 2019 03:27:19 PM</td>
+                                                <td class='linked' test-id='3'>Eshop Payments Preauth+Settle</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mar 15, 2019 03:28:32 PM</td>
+                                                <td class='linked' test-id='4'>Eshop Payments Preauth+Settle</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mar 15, 2019 03:29:46 PM</td>
+                                                <td class='linked' test-id='5'>Eshop Payments Preauth+Settle</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mar 15, 2019 03:30:57 PM</td>
+                                                <td class='linked' test-id='6'>Eshop Payments Preauth+Settle</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mar 15, 2019 03:32:09 PM</td>
+                                                <td class='linked' test-id='7'>Eshop Payments Preauth+Settle</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mar 15, 2019 03:33:22 PM</td>
+                                                <td class='linked' test-id='8'>Eshop Payments Preauth+Settle</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mar 15, 2019 03:34:33 PM</td>
+                                                <td class='linked' test-id='9'>Eshop Payments Preauth+Settle</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mar 15, 2019 03:35:45 PM</td>
+                                                <td class='linked' test-id='10'>Eshop Payments Preauth+Settle</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mar 15, 2019 03:36:57 PM</td>
+                                                <td class='linked' test-id='11'>Eshop Payments Preauth+Settle</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mar 15, 2019 03:38:08 PM</td>
+                                                <td class='linked' test-id='12'>Eshop Payments Preauth+Settle</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mar 15, 2019 03:39:22 PM</td>
+                                                <td class='linked' test-id='13'>Eshop Payments Preauth+Settle</td>
+                                                <td><span class='test-status fail'>fail</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mar 15, 2019 03:39:44 PM</td>
+                                                <td class='linked' test-id='14'>Eshop Payments Preauth+Settle</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mar 15, 2019 03:40:56 PM</td>
+                                                <td class='linked' test-id='15'>Eshop Payments Preauth+Settle</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mar 15, 2019 03:42:08 PM</td>
+                                                <td class='linked' test-id='16'>Eshop Payments Preauth+Settle</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mar 15, 2019 03:43:20 PM</td>
+                                                <td class='linked' test-id='17'>Eshop Payments Preauth+Settle</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mar 15, 2019 03:44:32 PM</td>
+                                                <td class='linked' test-id='18'>Eshop Payments Preauth+Settle</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mar 15, 2019 03:45:44 PM</td>
+                                                <td class='linked' test-id='19'>Eshop Payments Preauth+Settle</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mar 15, 2019 03:46:55 PM</td>
+                                                <td class='linked' test-id='20'>Eshop Payments Preauth+Settle</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mar 15, 2019 03:48:08 PM</td>
+                                                <td class='linked' test-id='21'>Eshop Payments Preauth+Settle</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mar 15, 2019 03:49:20 PM</td>
+                                                <td class='linked' test-id='22'>Eshop Payments Preauth+Settle</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mar 15, 2019 03:50:32 PM</td>
+                                                <td class='linked' test-id='23'>Eshop Payments Preauth+Settle</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mar 15, 2019 03:51:43 PM</td>
+                                                <td class='linked' test-id='24'>Eshop Payments Preauth+Settle</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mar 15, 2019 03:52:54 PM</td>
+                                                <td class='linked' test-id='25'>Eshop Payments Preauth+Settle</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mar 15, 2019 03:54:05 PM</td>
+                                                <td class='linked' test-id='26'>Eshop Payments Preauth+Settle</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mar 15, 2019 03:55:17 PM</td>
+                                                <td class='linked' test-id='27'>Eshop Payments Preauth+Settle</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mar 15, 2019 03:56:28 PM</td>
+                                                <td class='linked' test-id='28'>Eshop Payments Preauth+Settle</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mar 15, 2019 03:57:40 PM</td>
+                                                <td class='linked' test-id='29'>Eshop Payments Preauth+Settle</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+
+                </ul>
+        </div>
+    </div>
+
+    <div class='subview-right left'>
+        <div class='view-summary'>
+            <h5 class='author-name'></h5>
+        </div>
+    </div>
+</div>
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>29</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>141</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Mar 15, 2019 03:24:09 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Mar 15, 2019 03:58:51 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>2,082,066ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Others</th>
+						</tr>
+						<tr>
+							<td>Category:		TRANSMAT		PAYMENT		SOLUTIONS</td>
+							<td>28</td>
+							<td>1</td>
+							<td>0</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 28,
+				failParent: 1,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 1,
+				
+				passChild: 140,
+				failChild: 1,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				exceptionsChild: 1,
+				
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/5ed7b0c339b51aa347b44ccaa2e2ff29905b2f9f/dist/js/extent.js' type='text/javascript'></script>
+		
+		
+	</body>
+	
+</html>

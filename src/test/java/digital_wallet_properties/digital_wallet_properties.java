@@ -99,7 +99,7 @@ public class digital_wallet_properties {
 				 utils.ExtentLogPassFail(driver, "vodabtnx", "STEP 3\t\t PASSED", "STEP 3"+"\t\t FAILED", logger,true, rDefaultPath,vodapay);
 			 }
 			
-			utils.EnterText(driver, "usert",username,rDefaultPath+vodapay);
+			utils.EnterText(driver, "usert","000000",rDefaultPath+vodapay);
 			utils.EnterText(driver, "passt", password,rDefaultPath+vodapay);
 			Thread.sleep(2000);
 			if(utils.checkIfObjectExists(driver, "logint", rDefaultPath+vodapay)) {
